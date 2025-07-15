@@ -1,0 +1,888 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Plume API Automation</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Plume API Automation Execution Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 22, 2024 12:50:17 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validateCustomerDevicesDetail</p>
+            <p class="text-sm">
+              <span>12:50:17 pm</span> / <span>00:00:01:500</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validateCustomerDevicesDetail</h5>
+<span class='badge badge-success'>10.22.2024 12:50:17 pm</span>
+<span class='badge badge-danger'>10.22.2024 12:50:18 pm</span>
+<span class='badge badge-default'>00:00:01:500</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:17 pm</td>
+        <td>
+          API to get list of all customer devices for a location
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Response Code : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          API Response : {"devices":[{"mac":"52:82:46:ce:d3:a3","keyId":8,"medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-15T12:47:32.962Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.177","ipv6":[],"steering":{},"name":"Apple","icon":"unknown","iconV2":"smartdevice-apple","iconV3":"smartdevice","brand":"Apple","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-15T05:02:21.851Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"apple","type":{"id":"apple","brand":"Apple","icon":"unknown","iconV2":"smartdevice-apple","iconV3":"smartdevice","source":"rules","confidence":100},"brand":"Apple","name":"Apple","icon":"unknown","iconV2":"smartdevice-apple","iconV3":"smartdevice","source":"rules","confidence":100,"typeIdentified":false,"ohpCapable":false,"proximityCapable":false},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":false},"proximity":{"capable":false},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-15T12:47:29.951Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"3e:5f:18:4d:83:42","keyId":6,"medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-07T07:55:59.122Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.135","ipv6":[],"steering":{},"name":"Apple","icon":"unknown","iconV2":"smartdevice-apple","iconV3":"smartdevice","brand":"Apple","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-01T11:56:04.242Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"apple","type":{"id":"apple","brand":"Apple","icon":"unknown","iconV2":"smartdevice-apple","iconV3":"smartdevice","source":"rules","confidence":100},"brand":"Apple","name":"Apple","icon":"unknown","iconV2":"smartdevice-apple","iconV3":"smartdevice","source":"rules","confidence":100,"typeIdentified":false,"ohpCapable":false,"proximityCapable":false},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":false},"proximity":{"capable":false},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-07T07:55:56.110Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"14:7d:da:a5:28:fe","keyId":8,"hostName":"LM0001327","model":"Pro 16 2019","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-14T11:36:33.952Z","vapType":"home","networkId":"default","favorite":true,"appTime":true,"groupId":null,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.19","ipv6":[],"steering":{},"name":"AutomationTest","icon":"unknown","iconV2":"laptop-apple-macbook","iconV3":"laptop-apple-macbook","category":"Laptop","brand":"Apple","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":false,"accessZone":"home","personId":"66b2fd11ed4396000cb9227f","firstConnectedAt":"2024-09-25T10:26:33.101Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"macbook","type":{"id":"macbook","category":"Laptop","brand":"Apple","name":"MacBook","model":"Pro 16 2019","icon":"unknown","iconV2":"laptop-apple-macbook","iconV3":"laptop-apple-macbook","source":"rules","confidence":100},"category":"Laptop","brand":"Apple","name":"LM0001327","model":"Pro 16 2019","icon":"unknown","iconV2":"laptop-apple-macbook","iconV3":"laptop-apple-macbook","source":"rules","confidence":100,"typeIdentified":true,"ohpCapable":false,"proximityCapable":false},"nickname":"AutomationTest","plumeTypeIdentified":true,"customerTypeIdentified":false,"ohp":{"capable":false,"updatedAt":"2024-09-25T12:31:15.250Z","disableMobilizeSdk":false},"proximity":{"capable":false},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-14T11:36:30.940Z"}],"wpaMode":"","groupOfUnassignedDevices":false,"networkAccess":{"mode":"auto"}},{"mac":"0e:66:34:ef:19:6f","keyId":8,"hostName":"iPhone","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-15T11:34:43.121Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.249","ipv6":[],"steering":{},"name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","category":"Smart Phone","brand":"Apple","osName":"iOS","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-14T08:10:19.221Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"apple-iphone","type":{"id":"apple-iphone","category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100},"category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100,"typeIdentified":true,"ohpCapable":true,"proximityCapable":true},"nickname":null,"plumeTypeIdentified":true,"customerTypeIdentified":false,"ohp":{"capable":true},"proximity":{"capable":true},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-15T11:34:40.111Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"62:b6:f0:e1:b0:47","keyId":8,"hostName":"iPhone","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-15T04:37:12.571Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.139","ipv6":[],"steering":{},"name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","category":"Smart Phone","brand":"Apple","osName":"iOS","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-14T07:30:26.421Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"apple-iphone","type":{"id":"apple-iphone","category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100},"category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100,"typeIdentified":true,"ohpCapable":true,"proximityCapable":true},"nickname":null,"plumeTypeIdentified":true,"customerTypeIdentified":false,"ohp":{"capable":true},"proximity":{"capable":true},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-15T04:37:09.560Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"3e:92:ba:98:48:a1","keyId":8,"hostName":"iPhone","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-14T07:30:02.852Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.233","ipv6":[],"steering":{},"name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","category":"Smart Phone","brand":"Apple","osName":"iOS","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-14T07:25:11.331Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"apple-iphone","type":{"id":"apple-iphone","category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100},"category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100,"typeIdentified":true,"ohpCapable":true,"proximityCapable":true},"nickname":null,"plumeTypeIdentified":true,"customerTypeIdentified":false,"ohp":{"capable":true},"proximity":{"capable":true},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-14T07:29:59.840Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"3a:8a:24:e3:96:4b","keyId":7,"hostName":"iPhone","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-09T08:41:12.101Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.225","ipv6":[],"steering":{},"name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","category":"Smart Phone","brand":"Apple","osName":"iOS","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-09T08:33:09.422Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"apple-iphone","type":{"id":"apple-iphone","category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100},"category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100,"typeIdentified":true,"ohpCapable":true,"proximityCapable":true},"nickname":null,"plumeTypeIdentified":true,"customerTypeIdentified":false,"ohp":{"capable":true},"proximity":{"capable":true},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-09T08:41:09.085Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"a8:b1:3b:95:e5:8e","hostName":"LT0192059","medium":"ethernet","connectionState":"disconnected","connectionStateChangeAt":"2024-10-18T05:57:41.942Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.10","ipv6":[],"steering":{},"name":"LT0192059","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","category":"Laptop","osName":"Windows","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":false,"accessZone":"home","firstConnectedAt":"2024-10-07T07:42:33.161Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"windows","type":{"id":"windows","category":"Laptop","name":"Desktop","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"8","source":"rules","confidence":50},"category":"Laptop","name":"LT0192059","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"8","source":"rules","confidence":50,"typeIdentified":false,"ohpCapable":false,"proximityCapable":false},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":false},"proximity":{"capable":false},"networkHistory":[],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"approved"}},{"mac":"f8:89:d2:ec:1c:b7","keyId":8,"hostName":"LT0192059","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-15T05:10:32.571Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.134","ipv6":[],"steering":{},"name":"LT0192059","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","category":"Laptop","osName":"Windows","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":false,"accessZone":"home","firstConnectedAt":"2024-07-26T10:38:25.067Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"windows","type":{"id":"windows","category":"Laptop","name":"Desktop","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"8","source":"rules","confidence":68.75},"category":"Laptop","name":"LT0192059","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"8","source":"rules","confidence":68.75,"typeIdentified":false,"ohpCapable":false,"proximityCapable":false},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":false},"proximity":{"capable":false},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-15T05:10:29.560Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"9c:2d:cd:b8:09:4a","hostName":"LT0198781","medium":"ethernet","connectionState":"disconnected","connectionStateChangeAt":"2024-10-18T08:07:27.451Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.6","ipv6":[],"steering":{},"name":"LT0198781","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","category":"Laptop","osName":"Windows","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":false,"accessZone":"home","firstConnectedAt":"2024-10-17T10:26:37.921Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"windows","type":{"id":"windows","category":"Laptop","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"10.0","source":"rules","confidence":75},"category":"Laptop","name":"LT0198781","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"10.0","source":"rules","confidence":75,"typeIdentified":false,"ohpCapable":false,"proximityCapable":false},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":false},"proximity":{"capable":false},"networkHistory":[],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"approved"}},{"mac":"f0:a6:54:dc:48:d9","keyId":7,"hostName":"LT0206755","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-09T08:47:31.281Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.162","ipv6":[],"steering":{},"name":"LT0206755","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","category":"Laptop","osName":"Windows","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":false,"accessZone":"home","firstConnectedAt":"2024-08-05T10:46:29.458Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"windows","type":{"id":"windows","category":"Laptop","name":"Desktop","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"10.0","source":"rules","confidence":62.5},"category":"Laptop","name":"LT0206755","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"10.0","source":"rules","confidence":62.5,"typeIdentified":false,"ohpCapable":false,"proximityCapable":false},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":false},"proximity":{"capable":false},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-09T08:47:28.266Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"bc:f4:d4:5f:ad:ef","keyId":8,"hostName":"LT0207492","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-09T09:25:46.831Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.17","ipv6":[],"steering":{},"name":"LT0207492","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","category":"Laptop","osName":"Windows","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":false,"accessZone":"home","firstConnectedAt":"2024-10-09T09:23:27.442Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"windows","type":{"id":"windows","category":"Laptop","name":"Desktop","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"8","source":"rules","confidence":50},"category":"Laptop","name":"LT0207492","icon":"unknown","iconV2":"laptop-windows","iconV3":"laptop","osName":"Windows","osVersion":"8","source":"rules","confidence":50,"typeIdentified":false,"ohpCapable":false,"proximityCapable":false},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":false},"proximity":{"capable":false},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-09T09:25:43.821Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"02:01:a4:da:36:21","keyId":11,"hostName":"OnePlus-9R","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-22T03:57:32.872Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.101","ipv6":[],"steering":{},"name":"OnePlus-9R","icon":"unknown","iconV2":"smartphone-oneplus-9r","iconV3":"smartphone-oneplus","category":"Smart Phone","brand":"OnePlus","osName":"Android","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-15T10:29:30.932Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"oneplus-9r","type":{"id":"oneplus-9r","category":"Smart Phone","brand":"OnePlus","name":"9R","icon":"unknown","iconV2":"smartphone-oneplus-9r","iconV3":"smartphone-oneplus","osName":"Android","osVersion":"14","source":"rules","confidence":100},"category":"Smart Phone","brand":"OnePlus","name":"OnePlus-9R","icon":"unknown","iconV2":"smartphone-oneplus-9r","iconV3":"smartphone-oneplus","osName":"Android","osVersion":"14","source":"rules","confidence":100,"typeIdentified":true,"ohpCapable":true,"proximityCapable":true},"nickname":null,"plumeTypeIdentified":true,"customerTypeIdentified":false,"ohp":{"capable":true},"proximity":{"capable":true},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-22T03:57:29.856Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"1a:96:ac:14:16:76","keyId":8,"hostName":"OnePlus-Nord-CE3-5G","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-15T10:45:56.272Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.149","ipv6":[],"steering":{},"name":"OnePlus-Nord-CE3-5G","icon":"unknown","iconV2":"smartphone-oneplus","iconV3":"smartphone-oneplus","category":"Smart Phone","brand":"OnePlus","osName":"Android","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":true,"accessZone":"home","firstConnectedAt":"2024-10-14T10:09:44.922Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"oneplus-android-smartphone","type":{"id":"oneplus-android-smartphone","category":"Smart Phone","brand":"OnePlus","icon":"unknown","iconV2":"smartphone-oneplus","iconV3":"smartphone-oneplus","osName":"Android","osVersion":"14","source":"rules","confidence":75},"category":"Smart Phone","brand":"OnePlus","name":"OnePlus-Nord-CE3-5G","icon":"unknown","iconV2":"smartphone-oneplus","iconV3":"smartphone-oneplus","osName":"Android","osVersion":"14","source":"rules","confidence":75,"typeIdentified":false,"ohpCapable":true,"proximityCapable":true},"nickname":null,"plumeTypeIdentified":false,"customerTypeIdentified":false,"ohp":{"capable":true},"proximity":{"capable":true},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-15T10:45:53.261Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}},{"mac":"a8:4a:28:8b:ea:e4","keyId":8,"hostName":"Rohits-iPhone","medium":"wifi","connectionState":"disconnected","connectionStateChangeAt":"2024-10-15T05:02:21.851Z","vapType":"home","networkId":"default","favorite":false,"appTime":true,"focused":false,"focuses":[],"bandSteering":{"_version":"1.0.0","enable":false,"auto":true},"clientSteering":{"_version":"1.0.0","enable":false,"auto":true},"qos":{"prioritization":{"mode":"auto","realizedState":"ignore"}},"ip":"192.168.31.92","ipv6":[],"steering":{},"name":"Rohits-iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","category":"Smart Phone","brand":"Apple","osName":"iOS","health":null,"alerts":[],"freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"goals":[],"locallyAdministeredShifty":false,"locallyAdministeredShiftyExpired":false,"locallyAdministeredMac":false,"accessZone":"home","firstConnectedAt":"2024-10-15T04:37:12.571Z","capabilities":{"radio24":false,"radio50":false,"radio60":false},"features":{},"isPartnerComponent":false,"kind":{"id":"apple-iphone","type":{"id":"apple-iphone","category":"Smart Phone","brand":"Apple","name":"iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100},"category":"Smart Phone","brand":"Apple","name":"Rohits-iPhone","icon":"unknown","iconV2":"smartphone-apple-iphone","iconV3":"smartphone-apple-iphone","osName":"iOS","source":"rules","confidence":100,"typeIdentified":true,"ohpCapable":true,"proximityCapable":true},"nickname":null,"plumeTypeIdentified":true,"customerTypeIdentified":false,"ohp":{"capable":true},"proximity":{"capable":true},"networkHistory":[{"networkId":"default","connectionStateChangedAt":"2024-10-15T05:02:18.835Z"}],"wpaMode":"","groupOfUnassignedDevices":true,"networkAccess":{"mode":"auto"}}]}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Devices count for the location : 15
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 0 : 52:82:46:ce:d3:a3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 1 : 3e:5f:18:4d:83:42
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 2 : 14:7d:da:a5:28:fe
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 3 : 0e:66:34:ef:19:6f
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 4 : 62:b6:f0:e1:b0:47
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 5 : 3e:92:ba:98:48:a1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 6 : 3a:8a:24:e3:96:4b
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 7 : a8:b1:3b:95:e5:8e
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 8 : f8:89:d2:ec:1c:b7
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 9 : 9c:2d:cd:b8:09:4a
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 10 : f0:a6:54:dc:48:d9
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 11 : bc:f4:d4:5f:ad:ef
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 12 : 02:01:a4:da:36:21
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 13 : 1a:96:ac:14:16:76
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Device ID 14 : a8:4a:28:8b:ea:e4
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validateAllCustomerPersonsDetail</p>
+            <p class="text-sm">
+              <span>12:50:18 pm</span> / <span>00:00:00:943</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validateAllCustomerPersonsDetail</h5>
+<span class='badge badge-success'>10.22.2024 12:50:18 pm</span>
+<span class='badge badge-danger'>10.22.2024 12:50:19 pm</span>
+<span class='badge badge-default'>00:00:00:943</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:18 pm</td>
+        <td>
+          API to get list of all customer persons for a location
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+          Response Code : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+          API Response : [{"id":"66b2fd11ed4396000cb9227f","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"PROFILE_MAN","primaryDevice":"14:7d:da:a5:28:fe","homeAwayNotification":true,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-07T04:50:25.884Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-07T04:50:25.876Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":"disconnected","connectionStateChangeAt":"2024-10-14T11:36:33.952Z"},{"id":"66b2fd98df74da000bd2e3d7","nickname":"Prod_test2","firstName":"Prod_test2","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-07T04:52:40.731Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-07T04:52:40.719Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c43aa11da84e000bb624bb","nickname":"Kid-profile-1","firstName":"Kid-profile-1","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"kid","createdAt":"2024-08-20T06:41:37.744Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-20T06:41:37.739Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c5b72d663c6d000b966f80","nickname":"Kid-profile-1","firstName":"Kid-profile-1","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"kid","createdAt":"2024-08-21T09:45:17.949Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-21T09:45:17.942Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c5beef663c6d000b966f86","nickname":"Kid-profile-1","firstName":"Kid-profile-1","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-21T10:18:23.758Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c5bf0a663c6d000b966f87","nickname":"Kid-profile-1","firstName":"Kid-profile-1","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-21T10:18:50.222Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-21T10:18:50.215Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c5c1d01da84e000bb625c9","nickname":"shweta-teen","firstName":"shweta-teen","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-21T10:30:40.388Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-21T10:30:40.377Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c5c26f663c6d000b966f89","nickname":"shweta-teen","firstName":"shweta-teen","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-21T10:33:19.100Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-21T10:33:19.093Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c825731da84e000bb62779","nickname":"shweta-teen","firstName":"shweta-teen","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-23T06:00:19.286Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-23T06:00:19.281Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c8280a663c6d000b967190","nickname":"shweta-teen","firstName":"shweta-teen","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-23T06:11:22.922Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-23T06:11:22.917Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c8284a1da84e000bb6277d","nickname":"shweta-teenprofile","firstName":"shweta-teenprofile","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"teen","createdAt":"2024-08-23T06:12:26.475Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-23T06:12:26.464Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66c85fe8663c6d000b9671d5","nickname":"shweta-teenprofile","firstName":"shweta-teenprofile","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"kid","createdAt":"2024-08-23T10:09:44.877Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-23T10:09:44.871Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66cd656a1da84e000bb62b4f","nickname":"shweta-kidsprofile","firstName":"shweta-kidsprofile","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"profile":{"_version":"1.0.0","type":"kid","createdAt":"2024-08-27T05:34:34.325Z"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-08-27T05:34:34.317Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f3eaac7bdce4000bd8c3fa","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-25T10:49:16.828Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f3eaaec864ca000be6efea","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-25T10:49:18.951Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f3f1667bdce4000bd8c415","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-25T11:17:58.427Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f3f169c864ca000be6f002","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-25T11:18:01.286Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f40239c864ca000be6f020","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-25T12:29:45.426Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f4023cc864ca000be6f023","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-25T12:29:48.359Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f4db19c864ca000be6f0ba","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"PROFILE_MAN","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-26T03:55:05.352Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null},{"id":"66f4db1c7bdce4000bd8c4e7","nickname":"AutomationTest","firstName":"AutomationTest","lastName":"","imageId":"","primaryDevice":null,"homeAwayNotification":false,"appTime":true,"permission":{"accessType":"none"},"type":"person","focused":false,"focuses":[],"goals":[],"createdAt":"2024-09-26T03:55:08.037Z","locationId":"66a33d7c75a57d000b876e45","freeze":{"timeTemplates":[],"suspended":{"id":"suspend","name":"Suspend","enable":false},"autoExpire":{"id":"autoExpire","enable":false,"expiresAt":null},"schedules":[],"forever":{"id":"forever","name":"Indefinitely","enable":false},"frozen":false},"connectionState":null,"connectionStateChangeAt":null}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+          Persons count for the location : 21
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  0 : 66b2fd11ed4396000cb9227f
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  1 : 66b2fd98df74da000bd2e3d7
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  2 : 66c43aa11da84e000bb624bb
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  3 : 66c5b72d663c6d000b966f80
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  4 : 66c5beef663c6d000b966f86
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  5 : 66c5bf0a663c6d000b966f87
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  6 : 66c5c1d01da84e000bb625c9
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  7 : 66c5c26f663c6d000b966f89
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  8 : 66c825731da84e000bb62779
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  9 : 66c8280a663c6d000b967190
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  10 : 66c8284a1da84e000bb6277d
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  11 : 66c85fe8663c6d000b9671d5
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  12 : 66cd656a1da84e000bb62b4f
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  13 : 66f3eaac7bdce4000bd8c3fa
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  14 : 66f3eaaec864ca000be6efea
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  15 : 66f3f1667bdce4000bd8c415
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  16 : 66f3f169c864ca000be6f002
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  17 : 66f40239c864ca000be6f020
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  18 : 66f4023cc864ca000be6f023
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  19 : 66f4db19c864ca000be6f0ba
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+           Persons data :  20 : 66f4db1c7bdce4000bd8c4e7
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validateAppPrioritizationTemplateConfig</p>
+            <p class="text-sm">
+              <span>12:50:19 pm</span> / <span>00:00:00:344</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validateAppPrioritizationTemplateConfig</h5>
+<span class='badge badge-success'>10.22.2024 12:50:19 pm</span>
+<span class='badge badge-danger'>10.22.2024 12:50:20 pm</span>
+<span class='badge badge-default'>00:00:00:344</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:19 pm</td>
+        <td>
+          API to get App Prioritization Template Config Details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          Response Code : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          API Response : {"predefinedTemplates":["default","workFromHome","fastGaming","movieTime"],"templateTrafficClassMap":{"workFromHome":"video_conferencing","fastGaming":"gaming","movieTime":"av_streaming"}}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validateAppPrioritization</p>
+            <p class="text-sm">
+              <span>12:50:20 pm</span> / <span>00:00:00:385</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">validateAppPrioritization</h5>
+<span class='badge badge-success'>10.22.2024 12:50:20 pm</span>
+<span class='badge badge-danger'>10.22.2024 12:50:20 pm</span>
+<span class='badge badge-default'>00:00:00:385</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          API to get App Prioritization Details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          500
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          Internal Server Error
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          HTTP/1.1 500 Internal Server Error
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          API Response : {"error":{"statusCode":500,"message":"Internal Server Error","code":13}}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          Http Response is not OK: 500
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: FAILED! API did not respond with status 200 expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.jio.plume.apiservice.GetAppPrioritizationDetails.validateAppPrioritizationDetails(GetAppPrioritizationDetails.java:27)
+	at com.jio.plume.test.GetAppPrioritizationTest.validateAppPrioritization(GetAppPrioritizationTest.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validateCustomerNetworkDetail</p>
+            <p class="text-sm">
+              <span>12:50:20 pm</span> / <span>00:00:00:330</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validateCustomerNetworkDetail</h5>
+<span class='badge badge-success'>10.22.2024 12:50:20 pm</span>
+<span class='badge badge-danger'>10.22.2024 12:50:20 pm</span>
+<span class='badge badge-default'>00:00:00:330</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          API to get Current SSID Details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          Response Code : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          API Response : {"ssid":"MySSID-Dev-1"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:50:20 pm</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:50:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>validateAppPrioritization</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 22, 2024 12:50:17 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 22, 2024 12:50:20 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='80%'>
+<b>4</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='20%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='19%'><b>12</b> events passed</small></div>
+<div>
+<small data-tooltip='11%'><b>7</b> events failed,
+<b data-tooltip='%'>43</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"validateCustomerDevicesDetail":1.5,"validateAllCustomerPersonsDetail":0.943,"validateAppPrioritizationTemplateConfig":0.344,"validateAppPrioritization":0.385,"validateCustomerNetworkDetail":0.33
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 12,
+failEvents: 7,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 43
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

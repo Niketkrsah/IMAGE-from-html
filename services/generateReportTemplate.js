@@ -3,22 +3,15 @@ function generateReportTemplate({
   App_Version,
   Environment,
   Execution_Date,
-  EmailRecipients,
   Detail_Link,
   Rerun_Link
 }) {
   return `
     <div style="font-family: Arial, sans-serif; font-size: 14px; color: #000;">
-      <p><strong>Email Subject:</strong> ${App_Name} API Automation Result - ${Environment} Environment</p>
-
-      <p><strong>To:</strong> ${EmailRecipients || ''}</p>
-      <p><strong>BCC:</strong> Anuj33.Kumar@ril.com, Vinaykumar.Shah@ril.com, Mayur.Sonukale@ril.com</p>
-
-      <p><strong>Email Body:-</strong></p>
       <p><strong>[Note: This is a computer generated email]</strong></p>
 
       <p>
-        Dear Team,<br><br>
+        <strong>Dear Team,</strong><br><br>
         Please find the <strong>${App_Name}</strong> API Automation results for the
         <strong>${Environment}</strong> environment below:
       </p>
@@ -26,7 +19,7 @@ function generateReportTemplate({
       <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
         <thead>
           <tr style="background-color: #004C97; color: white;">
-            <th colspan="2" style="text-align: center; padding: 10px;">Jio Hotels API Automation Details:</th>
+            <th colspan="2" style="text-align: center; padding: 10px;">Jio ${App_Name} API Automation Details:</th>
           </tr>
         </thead>
         <tbody>

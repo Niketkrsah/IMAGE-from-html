@@ -66,7 +66,7 @@ router.post('/', upload.single('html'), async (req, res) => {
       Environment: environment,
       Execution_Date: executionDate,
       Detail_Link: detailLink,
-      Rerun_Link: rerunLink
+      Rerun_Link: rerunLink,
     });
 
     console.log(`📤 Email sent with screenshot: ${screenshotPath}`);

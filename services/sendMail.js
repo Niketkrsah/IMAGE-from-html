@@ -12,8 +12,7 @@ async function sendMail(screenshotPath, receiverEmail, meta) {
 
   // Attach receiver email to meta (for template)
   const finalMeta = {
-    ...meta,
-    EmailRecipients: receiverEmail
+    ...meta
   };
 
   const htmlBody = generateReportTemplate(finalMeta);
