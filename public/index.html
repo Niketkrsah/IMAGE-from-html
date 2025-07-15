@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Send HTML Screenshot</title>
+</head>
+<body>
+  <h2>Upload HTML Report</h2>
+  <input type="file" id="htmlFile" accept=".html" />
+  <button onclick="sendScreenshot()">Send Screenshot</button>
+
+  <script>
+    async function sendScreenshot() {
+      const fileInput = document.getElementById('htmlFile');
+      const file = fileInput.files[0];
+
+      if (!file) {
+        alert('Please select an HTML file first.');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('html', file);
+
+      const res = await fetch('/send-email', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await res.text();
+      alert(result);
+    }
+  </script>
+</body>
+</html>
