@@ -16,7 +16,6 @@ async function sendMail(screenshotPath, receiverEmail) {
     subject: '📊 HTML Report Screenshot',
     html: `
       <h2>📋 Test Report</h2>
-      <p>See your dashboard screenshot below:</p>
       <img src="cid:reportImage" style="width:100%; max-width:900px; border:1px solid #ccc;" />
     `,
     attachments: [
