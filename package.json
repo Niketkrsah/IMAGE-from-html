@@ -3,6 +3,8 @@
     "express": "^5.1.0",
     "multer": "^2.0.1",
     "nodemailer": "^7.0.5",
-    "puppeteer": "^24.12.1"
+    "playwright": "^1.54.1",
+    "puppeteer": "^24.12.1",
+    "puppeteer-core": "^24.13.0"
   }
 }

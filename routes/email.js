@@ -3,7 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
-const { takeScreenshot } = require('../services/screenshot');
+const { take_screenshot } = require('../services/screenshot');
 const { sendMail } = require('../services/sendMail');
 
 const router = express.Router();
@@ -52,12 +52,13 @@ router.post('/', upload.single('html'), async (req, res) => {
 
   const htmlPath = path.resolve(file.path);
   const screenshotPath = `screenshots/screenshot-${Date.now()}.png`;
+  console.log(screenshotPath);
 
   try {
     console.log(`📄 HTML uploaded: ${htmlPath}`);
 
     // Take screenshot
-    await takeScreenshot(htmlPath, screenshotPath);
+    await take_screenshot(htmlPath, screenshotPath);
 
     // Send mail with metadata
     await sendMail(screenshotPath, email, {
