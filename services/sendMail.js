@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 
-async function sendMail(screenshotPath) {
+async function sendMail(screenshotPath, receiverEmail) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -12,7 +12,7 @@ async function sendMail(screenshotPath) {
 
   const mailOptions = {
     from: 'niketkrsah@gmail.com',
-    to: 'niketkrsah@gmail.com',
+    to: receiverEmail,
     subject: '📊 HTML Report Screenshot',
     html: `
       <h2>📋 Test Report</h2>

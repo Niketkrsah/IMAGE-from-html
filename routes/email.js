@@ -8,7 +8,7 @@ const { sendMail } = require('../services/sendMail');
 
 const router = express.Router();
 
-// Configure multer (no size limit)
+// Configure multer
 const upload = multer({
   dest: 'uploads/',
   fileFilter: (req, file, cb) => {
@@ -22,12 +22,20 @@ const upload = multer({
 
 router.post('/', upload.single('html'), async (req, res) => {
   const file = req.file;
+  const email = req.body.email;
 
-  // Validation: check if file exists
+  // ✅ Validation: check file and email
   if (!file) {
     return res.status(400).json({
       success: false,
       message: 'No HTML file uploaded.'
+    });
+  }
+
+  if (!email) {
+    return res.status(400).json({
+      success: false,
+      message: 'Receiver email is required.'
     });
   }
 
@@ -38,16 +46,16 @@ router.post('/', upload.single('html'), async (req, res) => {
     console.log(`📄 HTML uploaded: ${htmlPath}`);
 
     await takeScreenshot(htmlPath, screenshotPath);
-    await sendMail(screenshotPath);
+    await sendMail(screenshotPath, email);
 
-    console.log(`📤 Email sent with screenshot: ${screenshotPath}`);
+    console.log(`📤 Email sent to ${email} with screenshot: ${screenshotPath}`);
 
     res.status(200).json({
       success: true,
-      message: '✅ Email sent successfully!'
+      message: `✅ Email sent to ${email} successfully!`
     });
 
-    // Schedule screenshot deletion after 5 minutes
+    // ⏳ Auto-delete screenshot after 5 minutes
     setTimeout(() => {
       fs.unlink(screenshotPath, err => {
         if (err) {
@@ -65,7 +73,7 @@ router.post('/', upload.single('html'), async (req, res) => {
       message: '❌ Failed to process or send email.'
     });
   } finally {
-    // Always remove uploaded HTML file
+    // 🧹 Always remove the uploaded HTML
     fs.unlink(htmlPath, err => {
       if (err) console.warn('⚠️ Failed to delete uploaded HTML:', err);
     });

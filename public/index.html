@@ -5,22 +5,31 @@
   <title>Send HTML Screenshot</title>
 </head>
 <body>
-  <h2>Upload HTML Report</h2>
+  <h2>Send HTML Screenshot</h2>
+
+  <label for="email">Receiver Email:</label><br>
+  <input type="email" id="email" required placeholder="example@domain.com" />
+  <br><br>
+
   <input type="file" id="htmlFile" accept=".html" />
+  <br><br>
+
   <button onclick="sendScreenshot()">Send Screenshot</button>
 
   <script>
     async function sendScreenshot() {
       const fileInput = document.getElementById('htmlFile');
+      const email = document.getElementById('email').value;
       const file = fileInput.files[0];
 
-      if (!file) {
-        alert('Please select an HTML file first.');
+      if (!file || !email) {
+        alert('Please select a file and enter the receiver email.');
         return;
       }
 
       const formData = new FormData();
       formData.append('html', file);
+      formData.append('email', email);
 
       const res = await fetch('/send-email', {
         method: 'POST',
