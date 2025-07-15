@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
-const fs = require('fs');
+const { generateReportTemplate } = require('./generateReportTemplate');
 
-async function sendMail(screenshotPath, receiverEmail) {
+async function sendMail(screenshotPath, receiverEmail, meta) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -10,14 +10,19 @@ async function sendMail(screenshotPath, receiverEmail) {
     }
   });
 
+  // Attach receiver email to meta (for template)
+  const finalMeta = {
+    ...meta,
+    EmailRecipients: receiverEmail
+  };
+
+  const htmlBody = generateReportTemplate(finalMeta);
+
   const mailOptions = {
     from: 'niketkrsah@gmail.com',
     to: receiverEmail,
-    subject: '📊 HTML Report Screenshot',
-    html: `
-      <h2>📋 Test Report</h2>
-      <img src="cid:reportImage" style="width:100%; max-width:900px; border:1px solid #ccc;" />
-    `,
+    subject: `${finalMeta.App_Name} API Automation Result - ${finalMeta.Environment} Environment`,
+    html: htmlBody,
     attachments: [
       {
         filename: 'report.png',

@@ -20,11 +20,11 @@ const upload = multer({
   }
 });
 
+// POST /email — handles the email send logic
 router.post('/', upload.single('html'), async (req, res) => {
   const file = req.file;
-  const email = req.body.email;
 
-  // ✅ Validation: check file and email
+  // Validate uploaded file
   if (!file) {
     return res.status(400).json({
       success: false,
@@ -32,6 +32,17 @@ router.post('/', upload.single('html'), async (req, res) => {
     });
   }
 
+  const {
+    email,
+    appName,
+    appVersion,
+    environment,
+    executionDate,
+    detailLink,
+    rerunLink
+  } = req.body;
+
+  // Validate email
   if (!email) {
     return res.status(400).json({
       success: false,
@@ -45,35 +56,42 @@ router.post('/', upload.single('html'), async (req, res) => {
   try {
     console.log(`📄 HTML uploaded: ${htmlPath}`);
 
+    // Take screenshot
     await takeScreenshot(htmlPath, screenshotPath);
-    await sendMail(screenshotPath, email);
 
-    console.log(`📤 Email sent to ${email} with screenshot: ${screenshotPath}`);
+    // Send mail with metadata
+    await sendMail(screenshotPath, email, {
+      App_Name: appName,
+      App_Version: appVersion,
+      Environment: environment,
+      Execution_Date: executionDate,
+      Detail_Link: detailLink,
+      Rerun_Link: rerunLink
+    });
+
+    console.log(`📤 Email sent with screenshot: ${screenshotPath}`);
 
     res.status(200).json({
       success: true,
-      message: `✅ Email sent to ${email} successfully!`
+      message: '✅ Email sent successfully!'
     });
 
-    // ⏳ Auto-delete screenshot after 5 minutes
+    // Auto-delete screenshot after 5 minutes
     setTimeout(() => {
       fs.unlink(screenshotPath, err => {
-        if (err) {
-          console.error('❌ Failed to delete screenshot:', err);
-        } else {
-          console.log('🧹 Screenshot deleted after 5 minutes:', screenshotPath);
-        }
+        if (err) console.error('❌ Failed to delete screenshot:', err);
+        else console.log('🧹 Screenshot deleted after 5 minutes:', screenshotPath);
       });
     }, 5 * 60 * 1000);
 
   } catch (error) {
-    console.error('💥 Error:', error);
+    console.error('💥 Error:', error.message);
     res.status(500).json({
       success: false,
       message: '❌ Failed to process or send email.'
     });
   } finally {
-    // 🧹 Always remove the uploaded HTML
+    // Always remove uploaded HTML
     fs.unlink(htmlPath, err => {
       if (err) console.warn('⚠️ Failed to delete uploaded HTML:', err);
     });
